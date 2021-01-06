@@ -1,4 +1,4 @@
-## OpenMind
+## Marketplace
 
 
 ### Запуск бекенда
@@ -63,20 +63,6 @@ cp sample.env .env
 pip install -r requirements.txt
 ```
 
-#### Зависимости фронтенда(опционально только для разработки)
-
-```bash
-cd front
-npm i
-```
-Разработка
-```bash
-npm run dev
-```
-Сборка
-```bash
-npm run build
-```
 
 #### Запуск севера
 
