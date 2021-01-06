@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  proxy:
+    image: nginx:1.17
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      - local-apps
+    volumes:
+      - /home/study/openmind/statics:/opt/static
+      - /home/study/openmind/media:/opt/media
+      - /home/study/openmind/front/buildapp:/opt/spa
+      - /home/study/openmind/proxy_config:/etc/nginx/conf.d
+
+
+
+networks:
+  local-apps:
+    external: true

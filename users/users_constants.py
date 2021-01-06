@@ -1,0 +1,18 @@
+"""
+Константы приложения
+"""
+
+USER_ACCOUNT_TYPE_APPLICANT = '__APPLICANT__'
+USER_ACCOUNT_TYPE_HIRER = '__HIRER__'
+USER_ACCOUNT_TYPE_ORGANIZATION = '__ORGANIZATION__'
+
+USERS_TYPES = (
+    (USER_ACCOUNT_TYPE_APPLICANT, 'Соискатель'),
+    (USER_ACCOUNT_TYPE_HIRER, 'Наниматель'),
+    (USER_ACCOUNT_TYPE_ORGANIZATION, 'Организация')
+)
+
+HIRER_TYPES = (
+    (USER_ACCOUNT_TYPE_HIRER, 'Наниматель'),
+    (USER_ACCOUNT_TYPE_ORGANIZATION, 'Организация')
+)

@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  regular_workers:
+    image: opemind/proj:4
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    command: "workers"
+    env_file:
+      - .env
+    networks:
+      - local-apps
+    volumes:
+      - /home/study/openmind:/service
+
+networks:
+  local-apps:
+    external: true

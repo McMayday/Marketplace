@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  study:
+    image: opemind/proj:4
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    env_file:
+      - .env
+#    ports:
+#      - "8000:8000"
+    networks:
+      - local-apps
+    volumes:
+      - /home/study/openmind:/service
+
+networks:
+  local-apps:
+    external: true
