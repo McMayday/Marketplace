@@ -23,15 +23,6 @@ docker run --name local-pg12 \
 docker exec -it local-pg12 psql -U postgres
 ```
 
-```sql
-CREATE USER open_mind CREATEDB LOGIN PASSWORD 'super_mega_mind_password';
-CREATE DATABASE open_mind WITH OWNER = open_mind CONNECTION LIMIT = -1;
-GRANT ALL PRIVILEGES ON DATABASE open_mind to open_mind;
-
-CREATE DATABASE open_mind2 WITH OWNER = open_mind CONNECTION LIMIT = -1;
-GRANT ALL PRIVILEGES ON DATABASE open_mind2 to open_mind;
-```
-
 #### Для выполенние асинхронных задач используется Celery. Требуется брокер и бекенд в виде реббита
 
 Можно установать в докере:
@@ -77,15 +68,6 @@ python manage.py createsuperuser
 
 ```bash
 python manage.py runserver
-```
-
-```bash
-docker build -t opemind/proj:4 .
-docker save -o opemind opemind/proj:4
-scp opemind study@194.67.105.157:~/
-rm openind
-ssh study@194.67.105.157 "docker load -i opemind"
-ssh study@194.67.105.157 "rm openind"
 ```
 
 ```bash
